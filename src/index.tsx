@@ -1,5 +1,6 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
+import './style/index.scss';
 library.add(fas);
 
 export { default as Button } from './components/Button';
@@ -9,5 +10,5 @@ export { default as Icon } from './components/Icon';
 export { default as Input } from './components/Input';
 export { default as Badge } from './components/Badge';
 export { default as Transition } from './components/Transition';
-export { default as Flexbox } from './components/FlexBox';
+export { default as Flex } from './components/FlexBox';
 export { default as Rate } from './components/Rate';
