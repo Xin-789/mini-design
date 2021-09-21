@@ -1,0 +1,145 @@
+$border-style: 3px solid $blue;
+.my-menu {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 30px;
+  list-style: none;
+  border-bottom: $menu-border-width solid $menu-border-color;
+  box-shadow: $menu-box-shadow;
+  > .menu-item {
+    padding: $menu-item-padding-x*1.5 $menu-item-padding-y;
+    margin-right: $menu-item-margin-right;
+    cursor: pointer;
+    transition: $menu-transition;
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+    &.is-disabled {
+      color: $menu-item-disabled-color;
+      pointer-events: none;
+    }
+    &.is-active,
+    &:hover {
+      color: $blue;
+      border-bottom: $border-style;
+    }
+
+    .menu-item-title{
+      margin-left: 10px;
+    }
+  }
+  .submenu {
+    position: relative;
+    .submenu-item{
+      box-sizing: border-box;
+      display: flex;
+      position: relative;
+      align-items: center;
+      transition: border-color .3s,background .3s,padding .1s cubic-bezier(.215,.61,.355,1);
+      .submenu-icon {
+        display: inline-block;
+        color: inherit;
+        font-style: normal;
+        line-height: 0;
+        text-align: center;
+        text-transform: none;
+        vertical-align: -.125em;
+        text-rendering: optimizeLegibility;
+      }
+      .submenu-title {
+        flex: auto;
+        margin-left: 10px;
+      }
+      .submenu-expand-icon{
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        color: #000000d9;
+        transform: translateY(-50%);
+        transition: transform .35s ease-in-out;
+
+      }
+      .open-icon{
+        transform: rotate(180deg);
+        top: unset;
+      }
+    }
+    .my-submenu {
+      display: none;
+      box-sizing: border-box;
+      background: $white;
+      color: $font-color;
+      overflow: hidden;
+      border-right: 0;
+
+      padding: $submenu-padding-x $submenu-padding-y;
+
+      .menu-item {
+        white-space: nowrap;
+        padding: $submenu-padding-x*1.5 $submenu-padding-y;
+        &.is-active,
+        &:hover {
+          color: $menu-item-active-color;
+        }
+        &.is-active {
+          background-color: rgb(230, 247, 255);
+        }
+      }
+
+    }
+    .my-submenu.is-opened {
+      display: block;
+    }
+  }
+}
+
+.menu-vertical {
+  flex-direction: column;
+  border-right:1px solid rgb(240, 240, 240) ;
+  margin: 10px 24px;
+  box-shadow: none;
+  >.menu-item{
+    margin-right: 0;
+    padding:$menu-item-padding-x 0;
+    &.is-active, &:hover {
+      border-bottom: none;
+      text-decoration: none;
+    }
+    &.is-active {
+      border-right: $border-style;
+    }
+  }
+  .submenu{
+    &.is-active, &:hover {
+      border: none;
+    }
+
+    .submenu-item{
+      padding: 8px 0;
+    }
+
+    .my-submenu {
+      background-color: #fafafa;
+      padding: 0;
+      .menu-item {
+        &.is-active {
+          border-right: $border-style;
+        }
+      }
+    }
+  }
+}
+
+.menu-horizontal {
+    .my-submenu {
+      position: absolute;
+      top: calc(100% + 4px);
+      left: 0;
+      min-width: 100%;
+      max-height: calc(100vh - 100px);
+      z-index: 1050;
+      box-shadow: $submenu-box-shadow;
+    }
+
+}

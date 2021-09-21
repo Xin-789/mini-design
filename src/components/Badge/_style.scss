@@ -1,0 +1,37 @@
+.my-badge-wrapper {
+  position: relative;
+}
+.my-badge {
+  display: inline-block;
+  &-independent,
+  &-content {
+    background-color: $badge-bg;
+    color: $badge-color;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 0 5px;
+    &:empty {
+      width: $badge-dot-size;
+      height: $badge-dot-size;
+      border-radius: ($badge-dot-size / 2);
+      padding: 0;
+    }
+  }
+
+  &-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    z-index: 1;
+  }
+  @each $key, $val in $theme-colors{
+    &-#{$key} {
+      &.my-badge-independent,
+      .my-badge-content {
+        background-color: $val;
+      }
+    }
+  }
+}

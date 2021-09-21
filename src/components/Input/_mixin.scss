@@ -1,0 +1,13 @@
+@mixin input-size(
+    $input-padding-y,
+    $input-padding-x,
+    $input-font-size,
+    $input-line-height,
+    $input-border-radius
+) {
+    padding:( $input-padding-y - $input-border-width) ( $input-padding-x - $input-border-width);
+    font-size: $input-font-size;
+    line-height:$input-line-height;
+   border-radius:  $input-border-radius;
+
+};
