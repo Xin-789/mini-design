@@ -77,7 +77,7 @@ $border-style: 3px solid $blue;
 
       .menu-item {
         white-space: nowrap;
-        padding: $submenu-padding-x*1.5 $submenu-padding-y;
+        padding: $submenu-padding-x 0;
         &.is-active,
         &:hover {
           color: $menu-item-active-color;
@@ -99,9 +99,11 @@ $border-style: 3px solid $blue;
   border-right:1px solid rgb(240, 240, 240) ;
   margin: 10px 24px;
   box-shadow: none;
+  padding-bottom: 10px;
   >.menu-item{
+    box-sizing: border-box;
     margin-right: 0;
-    padding:$menu-item-padding-x 0;
+    padding:8px 0;
     &.is-active, &:hover {
       border-bottom: none;
       text-decoration: none;
@@ -115,13 +117,10 @@ $border-style: 3px solid $blue;
       border: none;
     }
 
-    .submenu-item{
-      padding: 8px 0;
-    }
 
     .my-submenu {
       background-color: #fafafa;
-      padding: 0;
+      padding: 4px 0;
       .menu-item {
         &.is-active {
           border-right: $border-style;
@@ -132,6 +131,9 @@ $border-style: 3px solid $blue;
 }
 
 .menu-horizontal {
+    .submenu{
+       border-bottom: 3px solid white;
+    }
     .my-submenu {
       position: absolute;
       top: calc(100% + 4px);

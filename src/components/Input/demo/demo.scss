@@ -1,3 +1,5 @@
-div:nth-child(n){
-    margin-bottom: 6px;
+.wrapper {
+    div:nth-child(n){
+        margin: 5px;
+    }
 }

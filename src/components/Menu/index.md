@@ -32,7 +32,7 @@ export default () => (
 );
 ```
 
-### 导航栏
+### 侧导航栏
 
 ```tsx
 import React from 'react';
@@ -43,21 +43,22 @@ export default () => (
     <Menu
       mode={'vertical'}
       defaultIndex={'2'}
+      defaultOpenKeys={['4']}
       onSelect={(index) => {
         console.log(index);
       }}
     >
       <Menu.Item icon={<Icon icon={'feather'} />}>菜单1</Menu.Item>
       <Menu.Item icon={<Icon icon={'cat'} />}>菜单2</Menu.Item>
-      <Menu.Item icon={<Icon icon={'dove'} />}>菜单3</Menu.Item>
-      <Menu.SubMenu icon={<Icon icon={'dragon'} />} title="多级菜单1">
-        <Menu.Item>菜单4-1</Menu.Item>
-        <Menu.Item>菜单4-2</Menu.Item>
-        <Menu.Item>菜单4-3</Menu.Item>
+      <Menu.Item icon={<Icon icon={'minus-circle'} />}>菜单3</Menu.Item>
+      <Menu.SubMenu icon={<Icon icon={'info-circle'} />} title="菜单4">
+        <Menu.Item icon={<Icon icon={'info-circle'} />}>菜单4-1</Menu.Item>
+        <Menu.Item icon={<Icon icon={'info-circle'} />}>菜单4-2</Menu.Item>
+        <Menu.Item icon={<Icon icon={'info-circle'} />}>菜单4-3</Menu.Item>
       </Menu.SubMenu>
-      <Menu.SubMenu icon={<Icon icon={'crow'} />} title="多级菜单2">
-        <Menu.Item>菜单5-1</Menu.Item>
-        <Menu.Item>菜单5-2</Menu.Item>
+      <Menu.SubMenu icon={<Icon icon={'minus-circle'} />} title="菜单5">
+        <Menu.Item icon={<Icon icon={'minus-circle'} />}>菜单5-1</Menu.Item>
+        <Menu.Item icon={<Icon icon={'minus-circle'} />}>菜单5-2</Menu.Item>
       </Menu.SubMenu>
     </Menu>
   </>

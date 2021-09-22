@@ -21,7 +21,7 @@ import { Input } from 'mini-design';
 import './demo/demo.scss';
 export default () => (
   <>
-    <div classNames="wrapper">
+    <div className="wrapper">
       <Input placeholder="small" size="sm" />
       <Input placeholder="middle" size="md" />
       <Input placeholder="large" size="lg" />
@@ -38,7 +38,7 @@ import { Input, Icon } from 'mini-design';
 
 export default () => (
   <>
-    <div classNames="wrapper">
+    <div className="wrapper">
       <Input prepend={<Icon icon="search" color={'#d9d9d9'} />} />
       <Input append={'@qq.com'} />
     </div>
@@ -53,7 +53,7 @@ import React from 'react';
 import { Input } from 'mini-design';
 export default () => (
   <>
-    <div classNames="wrapper">
+    <div className="wrapper">
       <Input disabled />
       <Input disabled append={'@qq.com'} />
     </div>
