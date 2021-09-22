@@ -5,16 +5,16 @@ function Demo() {
   return (
     <div className="wrapper">
       <Button shape="circle">
-        <Icon icon="ad" />
+        <Icon icon="star" />
       </Button>
       <Button shape="circle" btnType="primary">
-        <Icon icon="ad" />
+        <Icon icon="star" />
       </Button>
       <Button shape="round">
-        <Icon icon="ad" />
+        <Icon icon="star" />
       </Button>
       <Button shape="round" btnType="primary">
-        <Icon icon="ad" />
+        <Icon icon="star" />
       </Button>
     </div>
   );

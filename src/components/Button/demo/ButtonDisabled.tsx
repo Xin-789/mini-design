@@ -13,11 +13,11 @@ function Demo() {
       <Button btnType="link" disabled>
         link
       </Button>
-      <Button btnType="circle" disabled>
-        <Icon icon="ad" />
+      <Button shape="circle" disabled>
+        <Icon icon="star" />
       </Button>
       <Button shape="round" disabled>
-        <Icon icon="ad" />
+        <Icon icon="star" />
       </Button>
     </div>
   );
