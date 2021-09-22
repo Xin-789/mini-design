@@ -65,4 +65,4 @@ export default () => (
 );
 ```
 
-<API></API>
+<API src="../../../src/components/Menu/Menu.tsx" ></API>

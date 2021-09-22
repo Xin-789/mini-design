@@ -18,4 +18,8 @@
 
 <code src="./demo/FlexOrder.tsx" ></code>
 
-<API></API>
+<API src="../../../src/components/FlexBox/FlexBox.tsx"></API>
+
+#### FlexItem
+
+<API src="../../../src/components/FlexBox/FlexItem.tsx" hideTitle ></API>

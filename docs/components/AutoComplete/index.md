@@ -38,9 +38,11 @@ const AutoCompleteDemo = () => {
 };
 export default AutoCompleteDemo;
 ```
+
 ## API
-| 属性 | 说明 | 类型 | 默认值 | 版本 |
-| --- | --- | --- | --- | --- |
-| fetchSuggestions | 筛选事件 | ( str: string ) => DataSourceType[] \| Promise<DataSourceType[]> |  |  |
-| onSelect | 选择回调事件 |(item: DataSourceType) => void |  |  |
-| renderMenuItem | 自定义渲染选项 | (item: DataSourceType) => React.ReactElement | - |  |
+
+| 属性             | 说明           | 类型                                                             | 默认值 | 版本 |
+| ---------------- | -------------- | ---------------------------------------------------------------- | ------ | ---- |
+| fetchSuggestions | 筛选事件       | ( str: string ) => DataSourceType[] \| Promise<DataSourceType[]> |        |      |
+| onSelect         | 选择回调事件   | (item: DataSourceType) => void                                   |        |      |
+| renderMenuItem   | 自定义渲染选项 | (item: DataSourceType) => React.ReactElement                     | -      |      |

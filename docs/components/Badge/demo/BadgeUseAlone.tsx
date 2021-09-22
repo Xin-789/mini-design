@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge, Button } from 'mini-design';
+import { Badge } from 'mini-design';
 import './index.scss';
 export default () => (
   <div className="prop-content">

@@ -5,4 +5,5 @@ export default {
     browsers: ['ie>9', 'Safari >= 6'],
   },
   extractCSS: true,
+  cssModules: true,
 };

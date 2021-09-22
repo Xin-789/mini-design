@@ -84,4 +84,4 @@ export default () => (
 );
 ```
 
-<API></API>
+<API src="../../../src/components/Rate/Rate.tsx" ></API>

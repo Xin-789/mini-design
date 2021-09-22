@@ -62,6 +62,6 @@ export default () => (
 );
 ```
 
-<API></API>
+<API src="../../../src/components/Icon/Icon.tsx" ></API>
 
 更多图标: https://fontawesome.com/v5.15/icons?d=listing&p=3&m=free
