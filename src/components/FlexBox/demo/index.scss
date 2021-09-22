@@ -1,0 +1,25 @@
+.flex-demo {
+    width: 80%;
+    padding: 12px;
+    margin: 20px auto;
+    .my-flex-box-item {
+      background-color: #3498ff;
+      color: #fff;
+      margin-bottom: 6px;
+      margin-top: 6px;
+      padding: 10px 5px;
+      text-align: center;
+    }
+    .my-flex-box-item:nth-child(2n){
+        opacity: 0.7;
+    }
+    h5{
+      font-size: 20px;
+      padding: 6px;
+      font-weight: 400;
+    }
+    h5:not(:first-child){
+      text-align: center;
+    }
+
+  }
