@@ -1,0 +1,46 @@
+.my-flex-box{
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    &-item{
+        flex: 0 0 auto;
+    }
+    &-top {
+        align-items: flex-start;
+    }
+    &-middle {
+        align-items: center;
+    }
+    &-bottom {
+        align-items: flex-end;
+    }
+    &-start {
+        justify-content: flex-start;
+    }
+    &-center {
+        justify-content: center;
+    }
+    &-end {
+        justify-content: flex-end;
+    }
+    &-space-around {
+        justify-content: space-around
+    }
+    &-space-between {
+        justify-content: space-between;
+    }
+    @for $value from 0 through 24 {
+        &-item-#{$value}{
+            box-sizing: border-box;
+            position: relative;
+            display: block;
+            // To prevent the collapse when column is empty.
+            min-height: 1px;
+            width: percentage(($value / 24));
+        }
+        &-item-order-#{$value}{
+            order: $value;
+        }
+    }
+}
+

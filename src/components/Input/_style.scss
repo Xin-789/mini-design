@@ -1,0 +1,89 @@
+.my-input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  color: $input-color;
+  background-color: $input-bg;
+  background-image: none;
+  border: $input-border-width solid $input-border-color;
+  transition: border-color 0.3s ease-in-out;
+  @include input-size(
+    $input-padding-y,
+    $input-padding-x,
+    $input-font-size,
+    $input-line-height,
+    $input-border-radius
+  );
+
+  font-weight: 500;
+  &:focus,
+  &:hover:not(:disabled) {
+    border-color: $input-border-hover-color;
+    outline: 0;
+  }
+  &::placeholder {
+    color: $input-placeholder-color;
+    font-weight: normal;
+  }
+  &:disabled {
+    background-color: $input-disabled-bg;
+    color: $input-disabled-color;
+    user-select: none;
+  }
+}
+.my-input-size-lg {
+  @include input-size(
+    $input-padding-y-lg,
+    $input-padding-x-lg,
+    $input-font-size,
+    $input-line-height,
+    $input-border-radius
+  );
+}
+.my-input-size-sm {
+  @include input-size(
+    $input-padding-y-sm,
+    $input-padding-x-sm,
+    $input-font-size,
+    $input-line-height,
+    $input-border-radius
+  );
+}
+
+.my-input-group {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  display: flex;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: #fafafa;
+  border: 1px solid #d9d9d9;
+  &-disabled {
+    color: #d9d9d9;
+    pointer-events: none;
+  }
+  
+  &-prepend, &-append{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 9px;
+    svg{
+      font-size: inherit;
+    }
+  }
+  > .my-input{
+    border: none;
+  }
+  &:focus,
+  &:hover:not(:disabled) {
+    border-color: $input-border-hover-color;
+    outline: 0;
+  }
+ 
+}
