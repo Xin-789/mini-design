@@ -12,3 +12,4 @@ export { default as Badge } from './components/Badge';
 export { default as Transition } from './components/Transition';
 export { default as Flex } from './components/FlexBox';
 export { default as Rate } from './components/Rate';
+export { default as Loader } from './components/Loader';

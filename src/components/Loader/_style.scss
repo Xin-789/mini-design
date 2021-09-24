@@ -1,0 +1,88 @@
+.my-loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    &-spin-wrapper{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-spin {
+        position: absolute;
+        display: inline-block;
+        width: 1em;
+        height:  1em;
+        font-size: $loader-dot-md;
+        transform: rotate(30deg);
+        animation: loaderMove 1.2s linear infinite;
+        margin-top: -30px;
+        &-dot {
+          position: absolute;
+          display: block;
+          width: 9px;
+          height: 9px;
+          border-radius: 50%;
+          background-color: $blue;
+          transform: scale(0.7);
+          transform-origin: 50% 50%;
+          opacity: 0.3;
+          animation: loaderDotMove 1s linear infinite alternate;
+      
+          &:first-child {
+            left: 0;
+            top: 0;
+          }
+          &:nth-child(2) {
+            top: 0;
+            right: 0;
+            animation-delay: 0.2s;
+          }
+          &:nth-child(3) {
+            bottom: 0;
+            right: 0;
+            animation-delay: 0.4s;
+          }
+          &:nth-child(4) {
+            bottom: 0;
+            left: 0;
+            animation-delay: 0.8s;
+          }
+        }
+    }
+    /** 大小 */
+    &-sm{
+        font-size: $loader-dot-sm;
+        i{
+            width: 6px;
+            height: 6px;
+        }
+    }
+  
+    &-lg{
+        font-size: $loader-dot-lg;
+        i{
+            width: 12px;
+            height: 12px;
+        }
+    }
+    /** 自定义文字 */
+    &-text {
+        margin-top: 2px;
+        font-size: 14px;
+        color: $blue;
+        padding-top: 10px;
+    }
+}
+
+@keyframes loaderMove {
+    to{
+        transform: rotate(390deg);
+    }
+}
+@keyframes loaderDotMove {
+  to {
+    opacity: 1;
+  }
+}
