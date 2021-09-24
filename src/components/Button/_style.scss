@@ -15,6 +15,7 @@
     box-shadow: $btn-box-shadow;
     cursor: pointer;
     transition: $btn-transition;
+    user-select: none;
     &.disabled,
     &[disabled] {
       cursor: not-allowed;
