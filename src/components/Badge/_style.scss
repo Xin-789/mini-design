@@ -1,3 +1,4 @@
+@use "sass:math";
 .my-badge-wrapper {
   position: relative;
 }
@@ -14,7 +15,7 @@
     &:empty {
       width: $badge-dot-size;
       height: $badge-dot-size;
-      border-radius: ($badge-dot-size / 2);
+      border-radius: math.div($badge-dot-size , 2);
       padding: 0;
     }
   }
