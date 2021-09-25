@@ -1,0 +1,46 @@
+.my-progress {
+  display: flex;
+  align-items: center;
+  border-radius: $progress-border-radius;
+  &-outer {
+    flex: 1;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+  &-info-text {
+    width: 44px;
+    height: 20px;
+    padding-left: 10px;
+    font-size: 14px;
+  }
+  &-inner {
+    display: inline-block;
+    width: 100%;
+    background-color: $progress-inner-bg;
+    border-radius: 100px;
+    height: 10px;
+  }
+  &-bg {
+    background-color: $progress-bg;
+    border-radius: 100px;
+    transition: $progress-bar-transition;
+    height: 10px;
+  }
+}
+.my-progress-fail {
+  .my-progress-bg {
+    background-color: $progress-fail  !important;
+  }
+  .my-progress-status-fail {
+    color: $progress-fail;
+  }
+}
+
+.my-progress-success {
+  .my-progress-bg {
+    background-color: $progress-success !important;
+  }
+  .my-progress-status-success {
+    color: $progress-success;
+  }
+}
