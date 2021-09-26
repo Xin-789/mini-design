@@ -14,3 +14,4 @@ export { default as Flex } from './components/FlexBox';
 export { default as Rate } from './components/Rate';
 export { default as Loader } from './components/Loader';
 export { default as Progress } from './components/Progress';
+export { default as Upload } from './components/Upload';
