@@ -1,18 +1,18 @@
 import React, { FC } from 'react';
 import Progress from '@/components/Progress';
 import Icon from '@/components/Icon/Icon';
-import { UploadItemProps } from './Upload';
+import { UploadFileType } from './Upload';
 import classNames from 'classnames';
 interface UploadListProps {
-  fileList: UploadItemProps[];
-  onRemove: (_file: UploadItemProps) => void;
+  fileList: UploadFileType[];
+  onRemove: (_file: UploadFileType) => void;
 }
 const UploadList: FC<UploadListProps> = (props) => {
   const { fileList, onRemove } = props;
 
-  const render = (file: UploadItemProps) => {
+  const render = (file: UploadFileType) => {
     const { status, percent } = file;
-    const show = status === 'uploading' || status === 'ready';
+    const show = status === 'uploading';
     const visibility = show ? 'visible' : 'hidden';
     const wrapStyle: React.CSSProperties = { visibility };
     return (
@@ -21,7 +21,7 @@ const UploadList: FC<UploadListProps> = (props) => {
       </div>
     );
   };
-  const renderFileItems = (file: UploadItemProps) => {
+  const renderFileItems = (file: UploadFileType) => {
     const { name, status } = file;
     const infoClass = classNames('my-upload-info', {
       'my-upload-info-error': status === 'error',

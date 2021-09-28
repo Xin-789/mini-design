@@ -1,8 +1,8 @@
-## Upload
+## Upload 文件上传
 
 ### 基本用法
 
-```tsx
+```jsx
 import React from 'react';
 import { Upload } from 'mini-design';
 
@@ -17,7 +17,7 @@ export default () => {
 
 ### 文件列表
 
-```tsx
+```jsx
 import React from 'react';
 import { Upload } from 'mini-design';
 
@@ -50,7 +50,7 @@ export default () => {
 
 ### 拖拽上传
 
-```tsx
+```jsx
 import React from 'react';
 import { Upload } from 'mini-design';
 
@@ -73,6 +73,39 @@ export default () => {
     </>
   );
 };
+```
+
+### 自动上传
+
+```jsx
+import React from 'react';
+import { Upload, Button } from 'mini-design';
+
+export default function Demo() {
+  const [value, setValue] = React.useState([]);
+  const uploaderRef = React.useRef();
+
+  const handleUpload = () => {
+    uploaderRef.current.start();
+  };
+
+  return (
+    <>
+      <Upload
+        value={value}
+        autoUpload={false}
+        action="//jsonplaceholder.typicode.com/posts/"
+        onChange={setValue}
+        ref={uploaderRef}
+        auto={false}
+      />
+      <hr />
+      <Button disabled={!value.length} onClick={handleUpload}>
+        Start Upload
+      </Button>
+    </>
+  );
+}
 ```
 
 <API src="../../../src/components/Upload/Upload.tsx" ></API>
