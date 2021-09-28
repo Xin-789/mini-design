@@ -128,7 +128,6 @@ const Upload = forwardRef((props: UploadProps, ref) => {
     (file: UploadFileType) => {
       const formData = new FormData();
       formData.append(name || 'file', file.file);
-
       axios
         .post(action, formData, {
           headers: {
@@ -289,6 +288,11 @@ const Upload = forwardRef((props: UploadProps, ref) => {
     </div>
   );
 });
-
+Upload.defaultProps = {
+  disabled: false,
+  auto: true,
+  draggable: false,
+  multiple: false,
+};
 Upload.displayName = 'Upload';
 export default Upload;
